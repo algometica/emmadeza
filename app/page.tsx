@@ -47,10 +47,11 @@ export default function HomePage() {
           <div className="text-center">
             {/* Badge */}
             <div className="flex justify-center mb-8">
-              <div className="flex items-center space-x-2 bg-gradient-to-r from-purple-500/20 to-cyan-500/20 backdrop-blur-sm border border-purple-500/30 px-6 py-3 rounded-full">
-                <MapPin className="h-5 w-5 text-cyan-400" />
-                <span className="text-cyan-100 font-medium">Representing Canada</span>
-                <Sparkles className="h-5 w-5 text-purple-400" />
+              <div className="flex items-center space-x-2 bg-gradient-to-r from-purple-500/20 to-cyan-500/20 backdrop-blur-sm border border-purple-500/30 px-4 sm:px-6 py-3 rounded-full max-w-full">
+                <MapPin className="h-5 w-5 text-cyan-400 flex-shrink-0" />
+                <span className="text-cyan-100 font-medium text-base sm:text-lg text-center whitespace-normal break-words">
+                  Representing Canada in Ljubljana, Slovenia
+                </span>
               </div>
             </div>
             
@@ -138,7 +139,7 @@ export default function HomePage() {
                 
                 <div className="space-y-4">
                   <p className="text-lg text-gray-300 leading-relaxed">
-                    This exclusive long sleeve design captures the essence of hip-hop culture with bold, 
+                    This exclusive crewneck sweater captures the essence of hip-hop culture with bold, 
                     street-inspired typography that makes a statement wherever you go.
                   </p>
                   
