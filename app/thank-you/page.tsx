@@ -1,11 +1,11 @@
 'use client';
 
-import React, { useEffect, useState } from 'react';
+import React, { Suspense, useEffect, useState } from 'react';
 import { useSearchParams } from 'next/navigation';
 import { CheckCircle, Music, Trophy, ArrowLeft, Sparkles, Zap } from 'lucide-react';
 import Link from 'next/link';
 
-export default function ThankYouPage() {
+function ThankYouContent() {
   const searchParams = useSearchParams();
   const sessionId = searchParams.get('session_id');
   const [customerEmail, setCustomerEmail] = useState<string>('');
@@ -132,13 +132,13 @@ export default function ThankYouPage() {
           )}
 
           {/* Back to Home */}
-          <Link 
-            href="/"
-            className="inline-flex items-center space-x-3 bg-gradient-to-r from-purple-500 to-cyan-500 text-white font-bold py-4 px-8 rounded-xl hover:shadow-2xl hover:scale-105 transition-all duration-300"
-          >
-            <ArrowLeft className="h-5 w-5" />
-            <span>Back to Home</span>
-          </Link>
+          <div className="flex justify-center mt-8">
+            <Link href="/">
+              <span className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-purple-500 to-cyan-500 text-white rounded-xl font-bold shadow-lg hover:scale-105 transition-transform">
+                <ArrowLeft className="h-5 w-5 mr-2" /> Back to Home
+              </span>
+            </Link>
+          </div>
         </div>
 
         {/* Footer Message */}
@@ -147,5 +147,13 @@ export default function ThankYouPage() {
         </p>
       </div>
     </main>
+  );
+}
+
+export default function ThankYouPage() {
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      <ThankYouContent />
+    </Suspense>
   );
 }
