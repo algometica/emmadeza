@@ -11,12 +11,7 @@ export default function ThankYouPage() {
   const [customerEmail, setCustomerEmail] = useState<string>('');
 
   useEffect(() => {
-    // In a real implementation, you might want to verify the session
-    // and get customer details from Stripe
-    if (sessionId) {
-      // This is where you'd typically make an API call to verify the session
-      // For now, we'll just show a generic thank you message
-    }
+    // No backend session verification needed
   }, [sessionId]);
 
   return (
