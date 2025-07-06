@@ -66,8 +66,8 @@ export default function HomePage() {
               Get exclusive gear and be part of her legendary journey.
             </p>
 
-            {/* Stats/Features */}
-            <div className="flex flex-wrap justify-center gap-8 mb-16">
+            {/* Stats/Features - REMOVED */}
+            {/* <div className="flex flex-wrap justify-center gap-8 mb-16">
               <div className="flex items-center space-x-3 text-gray-300">
                 <div className="p-2 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-lg">
                   <Trophy className="h-6 w-6 text-white" />
@@ -86,7 +86,7 @@ export default function HomePage() {
                 </div>
                 <span className="font-medium">Limited Edition</span>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>
